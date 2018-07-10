@@ -8,7 +8,11 @@
       "sourceRoot": "src",
       "projectType": "application",
       "prefix": "app",
-      "schematics": {},
+      "schematics": {
+        "@schematics/angular:component": {
+          "styleext": "scss"
+        }
+      },
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
@@ -22,8 +26,18 @@
               "src/favicon.ico",
               "src/assets"
             ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                ".",
+                "styles"
+              ]
+            },
             "styles": [
-              "src/styles.css"
+              "src/assets/scss/style.scss",
+              {
+                "input": "src/assets/scss/style.scss",
+                "lazy": true
+              }
             ],
             "scripts": []
           },
@@ -72,7 +86,7 @@
             "tsConfig": "src/tsconfig.spec.json",
             "karmaConfig": "src/karma.conf.js",
             "styles": [
-              "src/styles.css"
+              "src/assets/scss/style.scss"
             ],
             "scripts": [],
             "assets": [

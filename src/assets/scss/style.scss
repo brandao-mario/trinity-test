@@ -1,0 +1,33 @@
+@import './base/variables';
+@import './base/functions';
+@import './base/reset';
+
+html {
+  margin: 0;
+}
+
+body {
+  @include gradient-vertical($blue-light, $blue-dark);
+  min-width: 100vw;
+  min-height: 100vh;
+  margin: 0;
+  font-size: 41.3%;
+  font-family: 'Open Sans', sans-serif;
+  padding: 80px 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  * {
+    box-sizing: border-box;
+  }
+
+  img {
+    max-width: 100%;
+  }
+}
+
+
+@media (min-width: 640px) {
+  body {
+    font-size: 62.5%;
+  }
+}

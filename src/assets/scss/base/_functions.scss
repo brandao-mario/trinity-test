@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,800');
+
+// gradient
+@mixin gradient-vertical($start-color: #555, $end-color: #333) {
+  background-image: -webkit-linear-gradient(top, $start-color 0%, $end-color 100%);  // Safari 5.1-6, Chrome 10+
+  background-image: -o-linear-gradient(top, $start-color 0%, $end-color 100%);  // Opera 12
+  background-image: linear-gradient(to bottom, $start-color 0%, $end-color 100%); // Standard, IE10, Firefox 16+, Opera 12.10+, Safari 7+, Chrome 26+
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{ie-hex-str($start-color)}', endColorstr='#{ie-hex-str($end-color)}', GradientType=0); // IE9 and down
+}
+
+// center align
+@mixin centeralign() {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

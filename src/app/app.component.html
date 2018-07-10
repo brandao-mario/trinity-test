@@ -1,20 +1,49 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
 
+
+<main class="main-content">
+  <h1 class="main-content-title">New Zealand</h1>
+  <p class="main-content-text">This project might be trickier than ir seems. Look around carefully. What you see? The sky is blue, the grass is green. The
+    sun shines through te window.</p>
+    
+    <picture class="circle" (click)="openModal($event)">
+      <img 
+      alt="Lake Mountain" 
+      src="../assets/img/new-zealand-679068_640.jpg"
+      srcset="../assets/img/new-zealand-679068_640.jpg 640w,
+      ../assets/img/new-zealand-679068_1920.jpg 1920w">
+    </picture>
+    
+    <picture class="rectangle" (click)="openModal($event)">
+      <img 
+      alt="Lake Web Kai Dock" 
+      src="../assets/img/new-zealand-583176_640.jpg"
+      srcset="../assets/img/new-zealand-583176_640.jpg 640w,
+      ../assets/img/new-zealand-583176_1920.jpg 1920w">
+    </picture>
+    
+    <picture class="square" (click)="openModal($event)">
+      <img 
+      alt="Doubtful Sound Fjord" 
+      src="../assets/img/new-zealand-583181_640.jpg"
+      srcset="../assets/img/new-zealand-583181_640.jpg 640w,
+      ../assets/img/new-zealand-583181_1920.jpg 1920w">
+    </picture>
+    
+    <picture class="triangle" (click)="openModal($event)">
+      <img 
+      alt="Sun rise beach" 
+      src="../assets/img/sun-rise-661541_640.jpg"
+      srcset="../assets/img/sun-rise-661541_640.jpg 640w,
+      ../assets/img/sun-rise-661541_1920.jpg 1920w">
+    </picture>
+    
+    
+    <div #myModal class="modal">
+      <button (click)="closeModal()" class="btn-close"></button>
+      <div class="modal-content">
+        <h2 class="modal-title">{{ modalTitle }}</h2>
+        <img src="{{ imgSrc }}" alt="{{ modalTitle }}">
+      </div>
+    </div>
+  </main>
+  
